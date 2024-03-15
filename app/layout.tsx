@@ -4,6 +4,7 @@ import "./globals.css";
 import { ConvexClientProvider } from "@/providers/convex-client-provider";
 import { Toaster } from "@/components/ui/sonner";
 import { ModalProvider } from "@/providers/modal-provider";
+import { Analytics } from "@vercel/analytics/react";
 
 const font = Poppins({
   subsets: ["latin"],
@@ -27,6 +28,7 @@ export default function RootLayout({
           <Toaster />
           <ModalProvider />
           {children}
+          <Analytics />
         </ConvexClientProvider>
       </body>
     </html>
