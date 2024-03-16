@@ -16,7 +16,7 @@ import { ConfirmModal } from "./confirm-modal";
 import { Button } from "./ui/button";
 import { useRenameModal } from "@/store/use-rename-modal";
 import { useState } from "react";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 
 interface ActionProps {
   children: React.ReactNode;
@@ -53,7 +53,6 @@ export const Actions = ({
       })
       .catch(() => toast.error("Failed to delete board"));
   };
-
 
   return (
     <DropdownMenu>
